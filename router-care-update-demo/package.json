@@ -1,0 +1,12 @@
+{
+  "name": "router-care-update-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Neon WiFi router update demo with comment persistence",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

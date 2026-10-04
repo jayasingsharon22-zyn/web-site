@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Router Update</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="orb orb-one"></div>
+  <div class="orb orb-two"></div>
+  <div class="orb orb-three"></div>
+  <div class="ring ring-one"></div>
+  <div class="ring ring-two"></div>
+
+  <header class="nav">
+    <div class="brand">
+      <span class="brand-mark">AI</span>
+      <span>ROUTER CARE</span>
+    </div>
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#status">Status</a>
+      <a href="#about">About</a>
+      <a href="#support">Support</a>
+    </nav>
+    <span class="secure-pill">Secure demo</span>
+  </header>
+
+  <main id="home">
+    <section class="hero" id="status">
+      <div class="mini-icon">↻</div>
+      <p class="eyebrow">ROUTER MAINTENANCE</p>
+      <h1>Your WiFi router<br><span>needs an update</span></h1>
+      <p class="subtitle">
+        A firmware update is ready. Before continuing, please enter a short comment
+        about your experience with the router.
+      </p>
+
+      <div class="panel">
+        <div class="step" id="stepComment">
+          <div class="step-number">01</div>
+          <div class="step-copy">
+            <h2>Enter your comment before updating</h2>
+            <p>Your comment will be saved to the demo database.</p>
+            <form id="commentForm">
+              <label for="comment">Your comment</label>
+              <textarea id="comment" name="comment" maxlength="1000"
+                placeholder="Tell us about your WiFi experience..." required></textarea>
+              <div class="form-footer">
+                <span id="counter">0 / 1000</span>
+                <button type="submit" class="primary-btn">
+                  <span>Continue update</span>
+                  <span class="arrow">→</span>
+                </button>
+              </div>
+              <p class="error" id="error" role="alert"></p>
+            </form>
+          </div>
+        </div>
+
+        <div class="step hidden" id="stepLoading">
+          <div class="loader-wrap">
+            <div class="loader"></div>
+            <div class="loader-check">✓</div>
+          </div>
+          <h2>Updating your router...</h2>
+          <p>Please wait while we complete the update.</p>
+          <div class="progress"><span id="progressBar"></span></div>
+        </div>
+
+        <div class="step hidden" id="stepDone">
+          <div class="success-icon">✓</div>
+          <p class="eyebrow">UPDATE COMPLETE</p>
+          <h2>Thank you for your time</h2>
+          <p>Your comment has been saved successfully.</p>
+          <button class="secondary-btn" id="restartBtn">Return to start</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="about">
+    <span>ROUTER CARE</span>
+    <span>Demo interface — no router credentials are requested.</span>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
